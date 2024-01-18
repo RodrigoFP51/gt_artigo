@@ -3,19 +3,15 @@ library(gt)
 library(gtExtras)
 library(WDI)
 
-countries <-  c("BR","USA","AR",
-                "AT","AU","BG",
-                "CL","CH","NO",
-                "DE","DK","FR",
-                "ES","FI","GB",
-                "IE","IN","IT",
+countries <-  c("BR","USA","AR","AT","AU","BG","CL","CH","NO",
+                "DE","DK","FR","ES","FI","GB","IE","IN","IT",
                 "LU","MX")
 gdp_per_cap <-
   WDI(
-      country = countries,
-      indicator = c("gdp_per_cap" = "NY.GDP.PCAP.KD"),
-      start = 1980,
-      end = 2020
+    country = countries,
+    indicator = c("gdp_per_cap" = "NY.GDP.PCAP.KD"),
+    start = 1980,
+    end = 2020
   ) %>%
   as_tibble()
 
