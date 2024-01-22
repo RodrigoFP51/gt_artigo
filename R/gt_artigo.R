@@ -29,7 +29,6 @@ gdp_data <- gdp_per_cap %>%
   arrange(desc(perc_change))
 
 
-
 gdp_data %>%
   gt(rowname_col = "iso2c") %>%
   gt_plt_sparkline(
